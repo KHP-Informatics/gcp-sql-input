@@ -5,7 +5,7 @@ import gate.cloud.io.sql.SQLInputHandler;
 
 public class DoTest {
   
-  protected SQLInputHandler sq;
+  protected SQLInputHandler sq = new SQLInputHandler();
 
   /* public static void main(String[] args){  
     SQLInputHandler sh = new SQLInputHandler();

@@ -1,0 +1,1 @@
+javac -d lib gate/cloud/io/sql/SQLInputHandler.java test/DoTest.java

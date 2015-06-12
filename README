@@ -2,8 +2,8 @@ Compiling:
 
 export CLASSPATH=$GATE_HOME/bin/gate.jar:$GATE_HOME/lib/*:$GCP_HOME/gcp.jar:$GCP_HOME/lib/*
 
-# compile
-javac -d lib gate/cloud/io/sql/SQLInputHandler.java test/DoTest.java 
+# for ease of testing
+alias docompile="javac -d lib gate/cloud/io/sql/SQLInputHandler.java test/DoTest.java"
+alias dotest="java -cp lib:$CLASSPATH org.junit.runner.JUnitCore DoTest"
 
-# test
-java -cp lib:$CLASSPATH org.junit.runner.JUnitCore DoTest
+docompile && do test
