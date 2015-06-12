@@ -2,8 +2,6 @@ Compiling:
 
 export CLASSPATH=$GATE_HOME/bin/gate.jar:$GATE_HOME/lib/*:$GCP_HOME/gcp.jar:$GCP_HOME/lib/*
 
-javac CRISInputHandler.java
-javac DoTest.java
-java -cp . DoTest
+javac -d lib gate/cloud/io/sql/SQLInputHandler.java test/DoTest.java 
+java -cp lib DoTest
 
-java DoTest

@@ -5,6 +5,10 @@
  *  
  */
 
+package gate.cloud.io.sql;
+
+import static gate.cloud.io.IOConstants.*;
+
 import gate.Document;
 import gate.Factory;
 import gate.FeatureMap;
