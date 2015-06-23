@@ -1,6 +1,8 @@
 SQLInputHandlerWrapper
 
 This directory has been created by the GATE bootstrap wizard.
+See src/README for details of compiling and testing the InputHandler classes
+
 The following files and directories have been created:
 
 SQLInputHandlerWrapper/
