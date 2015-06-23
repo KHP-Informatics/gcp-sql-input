@@ -1,0 +1,12 @@
+<!-- creole.xml SQLInputHandlerWrapper-->
+<!--  cass johnston, 16/6/2015 -->
+
+<!--
+This file just references the JAR file that contains the compiled resource.
+Configuration is contained in the @CreoleResource annotation on 
+gate.cloud.io.sql.SQLInputHandlerWrapper.
+-->
+
+<CREOLE-DIRECTORY>
+  <JAR SCAN="true">SQLInputHandlerWrapper.jar</JAR>
+</CREOLE-DIRECTORY>

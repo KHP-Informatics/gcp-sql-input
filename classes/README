@@ -1,0 +1,28 @@
+A java class to get gate GCP documents from sql databases and a wrapper CREOLE plugin class to 
+load it into your GATE apps (so you can use SQLInputHandler as an input type in GCP config)
+
+Compiling:
+
+export CLASSPATH=$GATE_HOME/bin/gate.jar:$GATE_HOME/lib/*:$GCP_HOME/gcp.jar:$GCP_HOME/lib/*:/gcpdata/lib/*
+
+# for ease of testing
+alias docompile="javac -d lib src/gate/cloud/io/sql/SQLInputHandler.java src/gate/cloud/io/sql/SQLStreamingInputHandler.java src/test/TestSQLInputHandler.java src/test/TestSQLStreamingInputHandler.java"
+alias dotest='java -cp "lib/*:lib/:$CLASSPATH" org.junit.runner.JUnitCore TestSQLInputHandler TestSQLStreamingInputHandler'
+
+docompile && do test
+
+There's a default log4j.properties file in lib for testing.
+
+You will need the microsoft sqlserver driver for jdbc in your classpath.
+
+# If you want to run GATE Developer from within the container, share you X11 socket:
+
+docker run --rm -it -v /gcpdata:/gcpdata  -v /tmp/.X11-unix:/tmp/.X11-unix   -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority --net=host -e 'JAVA_OPTS=-Xmx8G' --entrypoint=/bin/bash cassj/gcp
+
+
+# make the jar file for GATE 
+ant jar
+
+# Now you can go to the configure plugins option in GATE developer, add the directory as a source of
+# plugins and use the new CREOLE plugin. You just have to load it in your app, then save your app for
+# GATE cloud, then you can define the input handler in your config file.

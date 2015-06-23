@@ -1,0 +1,12 @@
+driver   = com.microsoft.sqlserver.jdbc.SQLServerDriver
+dbms     = sqlserver
+host     = 10.10.123.15
+port     = 1433
+name     = MyDB
+user     = MyUser
+password = MyPass
+table    = some_table
+idcol    = aDoc_ID
+textcol  = aTextField
+testid   = 1234567890
+where    = aDoc_ID\=\'1234567890\'
