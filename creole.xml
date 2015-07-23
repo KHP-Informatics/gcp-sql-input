@@ -9,4 +9,5 @@ gate.cloud.io.sql.SQLInputHandlerWrapper.
 
 <CREOLE-DIRECTORY>
   <JAR SCAN="true">SQLInputHandlerWrapper.jar</JAR>
+  <JAR>sqljdbc41.jar</JAR>
 </CREOLE-DIRECTORY>

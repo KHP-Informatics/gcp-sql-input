@@ -23,6 +23,8 @@ import gate.creole.*;
 import gate.creole.metadata.*;
 import gate.util.*;
 
+import com.microsoft.sqlserver.jdbc.*;
+
 import gate.cloud.io.sql.SQLInputHandler;
 import gate.cloud.io.sql.SQLStreamingInputHandler;
 
@@ -33,6 +35,9 @@ import gate.cloud.io.sql.SQLStreamingInputHandler;
                 comment = "Wrapper class to load SQLInputHandler and SQLStreamingInputHandler classes into a GATE application for GCP")
 public class SQLInputHandlerWrapper  extends AbstractProcessingResource
   implements ProcessingResource {
+  
+  // have to define this as it's a serializable class
+  private static final long serialVersionUID=1000;
   // doesn't actually do anything, just imports the SQLInputHandler and SQLStreamingInputHandler classes.
 
 } // class SQLInputHandler

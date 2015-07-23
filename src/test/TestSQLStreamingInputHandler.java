@@ -54,7 +54,7 @@ public class TestSQLStreamingInputHandler {
   public void testDocumentRetrieval() throws IOException, GateException, SQLException {
      sq.init();
      DocumentData doc =sq.nextDocument();
-     //System.out.println(doc.document.toString());
+     System.out.println(doc.document.toString());
      assertEquals(doc.getClass().getName(),"gate.cloud.io.DocumentData");
      doc = sq.nextDocument();
      assertEquals(doc, null);
